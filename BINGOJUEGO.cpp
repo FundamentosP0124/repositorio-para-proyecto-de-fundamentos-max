@@ -34,7 +34,7 @@ int main(void)
 
         /*SWITCH PRINCIPAL*/
         switch (opc) {
-            case 1: 
+            case 1: {
                 /* CASE DE NUEVA PARTIDA */
                 cout << endl << endl << "HAZ INICIADO UNA NUEVA PARTIDA!" << endl << endl;
 
@@ -76,35 +76,49 @@ int main(void)
                     }
 
                 }
-                
+
+                /*PAUSA Y PRESIONAR ENTER PARA QUE EL BOT COMIENCE A GENERAR NUMEROS*/
+                cout << "Presione Enter para que el bot genere el primer numero..." << endl;
+                cin.ignore();
+                cin.get();
+
+                cout << endl << "LA PARTIDA HA COMENZADO!" << endl;
+
                 break;
+            }
             
-            case 2: 
+            case 2: {
                 cout << endl << "REGISTRO DE PARTIDAS" << endl << endl;
-                break; 
+                break;
+            } 
             
-            case 3: 
+            case 3: {
                 cout << endl << "REGISTRO DE GANADORES" << endl << endl;
                 break;
+            }
             
-            case 4:
+            case 4: {
                 cout << endl << "INTEGRANTES DE MAX" << endl << endl;
                 cout << endl << "Ana Belen Ramirez Flores 00183224" << endl;
                 cout << endl << "Xochill Guissell Miguel Miranda 00114924" << endl;
                 cout << endl << "Maria Fernanda Ramirez Portillo 00127724" << endl;
                 cout << endl << endl;
                 break;
+            }
             
-            case 5: 
+            case 5: {
                 cout << endl << "INSTRUCCIONES DEL JUEGO" << endl << endl;
                 break;
+            }
 
-            case 6:
+            case 6: {
                 cout << "SALIR " << endl;
                 break;
+            }
 
-            default: 
+            default: {
                 break;
+            }
         }
     } while (opc != 6);
 
