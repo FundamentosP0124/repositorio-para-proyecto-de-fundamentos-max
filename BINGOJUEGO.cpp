@@ -8,6 +8,7 @@ using namespace std;
 
 /*PROTOTIPO DE FUNCION*/
 bool yaColocado(int, int mat[3][3]);
+void marcarNumero(int, int mat[3][3]);
 
 /*FUNCION MAIN*/
 int main(void)
@@ -92,6 +93,11 @@ int main(void)
                     numAl = 1 + rand() % 20;
                     cout << endl << endl << "Numero generado por el bot: " << numAl << endl << endl;
 
+                    /*LLAMA A LA FUNCION MARCAR NUMERO*/
+                    for (int k = 0; k < 2; k++) {
+                        marcarNumero(numAl, mat[k]);
+                    }
+                    
                     /*PAUSA ENTRE GENERACIONES DE NUMEROS*/
                     sleep(1);
 
@@ -149,4 +155,16 @@ bool yaColocado(int num, int mat[3][3])
         }
     }
     return false;
+}
+
+/*FUNCION PARA MARCAR UN NUMERO EN EL TABLERO REEMPLAZANDOLO POR CERO*/
+void marcarNumero(int num, int mat[3][3])
+{
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (mat[i][j] == num) {
+                mat[i][j] = 0;
+            }
+        }
+    }
 }
